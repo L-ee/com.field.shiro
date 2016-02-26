@@ -70,7 +70,7 @@
 	<!-- Shiro的Web过滤器 -->
 	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
 		<property name="securityManager" ref="securityManager" />
-		<property name="loginUrl" value="/index.html" />
+		<property name="loginUrl" value="/index.jsp" />
 		<property name="unauthorizedUrl" value="/unauthorized.jsp" />
 		<property name="filterChainDefinitions">
 			<value>
@@ -80,7 +80,9 @@
 				/unauthorized.jsp = anon
 				/login.jsp = authc
 				/logout = logout
-				/** = user
+				/css/** = anon
+				/images/** = anon
+				/js/** = anon
 			</value>
 		</property>
 	</bean>
