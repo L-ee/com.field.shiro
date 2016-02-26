@@ -1,78 +1,64 @@
-<!DOCTYPE html>
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<html lang="en" class="no-js">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Field Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/x-javascript">
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
 
-    <meta charset="utf-8">
-    <title>html566</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <meta name="keywords"
+          content="Flat Dark Web Login Form Responsive Templates,
+          Iphone Widget Template, Smartphone login forms,Login form,
+          Widget Template, Responsive Templates, a Ipad 404 Templates, Flat Responsive Templates"/>
 
-    <!-- CSS -->
-
-    <link rel="stylesheet" href="css/supersized.css">
-    <link rel="stylesheet" href="css/login.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-    <script src="js/html5.js"></script>
-    <![endif]-->
-    <script src="js/jquery-1.8.2.min.js"></script>
-    <script type="text/javascript" src="js/jquery.form.js"></script>
-    <script type="text/javascript" src="js/tooltips.js"></script>
-    <script type="text/javascript" src="js/login.js"></script>
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
 </head>
-
 <body>
-
-<div class="page-container">
-    <div class="main_box">
-        <div class="login_box">
-            <div class="login_logo">
-                <img src="images/logo.png" >
-            </div>
-
-            <div class="login_form">
-                <form action="index.html" id="login_form" method="post">
-                    <div class="form-group">
-                        <label for="j_username" class="t">邮　箱：</label>
-                        <input id="email" value="" name="email" type="text" class="form-control x319 in"
-                               autocomplete="off">
-                    </div>
-                    <div class="form-group">
-                        <label for="j_password" class="t">密　码：</label>
-                        <input id="password" value="" name="password" type="password"
-                               class="password form-control x319 in">
-                    </div>
-                    <div class="form-group">
-                        <label for="j_captcha" class="t">验证码：</label>
-                        <input id="j_captcha" name="j_captcha" type="text" class="form-control x164 in">
-                        <img id="captcha_img" alt="点击更换" title="点击更换" src="images/captcha.jpeg" class="m">
-                    </div>
-                    <div class="form-group">
-                        <label class="t"></label>
-                        <label for="j_remember" class="m">
-                            <input id="j_remember" type="checkbox" value="true">&nbsp;记住登陆账号!</label>
-                    </div>
-                    <div class="form-group space">
-                        <label class="t"></label>　　　
-                        <button type="button"  id="submit_btn"
-                                class="btn btn-primary btn-lg">&nbsp;登&nbsp;录&nbsp </button>
-                        <input type="reset" value="&nbsp;重&nbsp;置&nbsp;" class="btn btn-default btn-lg">
-                    </div>
-                </form>
-            </div>
+<script>
+//    $(document).ready(function (c) {
+//        $('.close').on('click', function (c) {
+//            $('.login-form').fadeOut('slow', function (c) {
+//                $('.login-form').remove();
+//            });
+//        });
+//    });
+</script>
+<h1>Field Login</h1>
+<div class="login-form">
+    <%--关闭窗口--%>
+    <%--<div class="close"></div>--%>
+    <div class="head-info">
+        <label class="lbl-1"> </label>
+        <label class="lbl-2"> </label>
+        <label class="lbl-3"> </label>
+    </div>
+    <div class="clear"></div>
+    <div class="avtar"><img src="images/avtar.png"/></div>
+    <form>
+        <input type="text" class="text" value="Username" onFocus="this.value = '';"
+               onBlur="if (this.value == '') {this.value = 'Username';}">
+        <div class="key">
+            <input type="password" value="Password" onFocus="this.value = '';"
+                                onBlur="if (this.value == '') {this.value = 'Password';}">
         </div>
-        <div class="bottom">Copyright &copy; 2014 - 2015 <a href="#">系统登陆</a></div>
+    </form>
+    <div class="signin">
+        <input type="submit" value="Login">
     </div>
 </div>
+<div class="copy-rights">
+    <p>Copyright &copy; 2015.Company name All rights reserved.<a target="_blank" href="http://www.17sucai.com/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+    </p>
+</div>
 
-<!-- Javascript -->
-
-<script src="js/supersized.3.2.7.min.js"></script>
-<script src="js/supersized-init.js"></script>
-<script src="js/scripts.js"></script>
 </body>
 </html>
