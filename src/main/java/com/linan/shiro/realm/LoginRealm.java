@@ -23,7 +23,7 @@ import com.linan.shiro.model.SysUser;
 
 
 /**
- * 用户登录验证
+ * 鐢ㄦ埛鐧婚檰璁よ瘉
  * @author Lee
  * 2016-01-30
  */
@@ -53,25 +53,6 @@ public class LoginRealm extends AuthorizingRealm {
 		// TODO Auto-generated method stub
 		String username = (String) principals.getPrimaryPrincipal();
 		SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
-		Set<String> role = new HashSet<String>();
-		SysUser user = (SysUser) SecurityUtils.getSubject().getSession().getAttribute("sysuser");
-		String roleIds = user.getRoleIds();
-		Query query = getSession().createQuery("FROM SysRole s WHERE s.id = :id").setParameter("id", roleIds);
-		SysRole roles = (SysRole) query.list().get(0);
-		role.add(roles.getRole());
-		info.setRoles(role);
-		
-		String resourceIds = roles.getResourceIds();
-		Set<String> resource = new HashSet<String>();
-		String[] split = resourceIds.split(",");
-		for (String string : split) {
-			Query q = getSession().createQuery("FROM SysResource s WHERE s.id = :id").setParameter("id", string);
-			SysResource r = (SysResource) q.list().get(0);
-			resource.add(r.getPermission());
-		}
-		info.setStringPermissions(resource);
-		
-		System.out.println("=========================doGetAuthorizationInfo====================================");
 		return info;
 	}
 
@@ -79,9 +60,9 @@ public class LoginRealm extends AuthorizingRealm {
 	protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
 		// TODO Auto-generated method stub
 		String username = (String) token.getPrincipal();
-
 		Query query = getSession().createQuery("FROM SysUser s WHERE s.username = :username").setParameter("username", username);
 		SysUser user = (SysUser) query.list().get(0);
+		System.out.println(user.toString());
 		if(user != null){
 			Subject subject = SecurityUtils.getSubject();
 			subject.getSession().setAttribute("sysuser", user);

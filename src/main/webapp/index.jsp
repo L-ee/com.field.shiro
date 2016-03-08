@@ -42,17 +42,17 @@
         <label class="lbl-3"> </label>
     </div>
     <div class="clear"></div>
-    <div class="avtar"><img src="images/avtar.png"/></div>
-    <form>
-        <input type="text" class="text" value="Username" onFocus="this.value = '';"
-               onBlur="if (this.value == '') {this.value = 'Username';}">
+    <div class="avtar">
+        <img src="images/avtar.png"/>
+    </div>
+    <form action="${pageContext.request.contextPath}/login/load.action" id="login">
+        <input type="text" name="username" class="text" placeholder="手机号" >
         <div class="key">
-            <input type="password" value="Password" onFocus="this.value = '';"
-                                onBlur="if (this.value == '') {this.value = 'Password';}">
+            <input type="password" name="password" placeholder="密码">
         </div>
     </form>
     <div class="signin">
-        <input type="submit" value="Login">
+        <input type="submit" value="Login" form="login">
     </div>
 </div>
 <div class="copy-rights">

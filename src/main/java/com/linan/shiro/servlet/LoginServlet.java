@@ -50,11 +50,11 @@ public class LoginServlet extends HttpServlet {
 		try {
 			subject.login(token);
 		} catch(UnknownAccountException e){
-			error = "ÓÃ»§Ãû»òÃÜÂë´íÎó";
+			error = "ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 		} catch (IncorrectCredentialsException e){
-			error = "ÓÃ»§Ãû»òÃÜÂë´íÎó";
+			error = "ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 		} catch (AuthenticationException e){
-			error = "ÆäËû´íÎó" + e.getMessage();
+			error = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + e.getMessage();
 		}
 		if(error != null){
 			request.setAttribute("error", error);

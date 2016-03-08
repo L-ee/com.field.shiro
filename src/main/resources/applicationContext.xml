@@ -75,14 +75,12 @@
 		<property name="filterChainDefinitions">
 			<value>
 				/index.jsp = anon
-				/login/load=anon
-				/user/findPermission=anon
-				/unauthorized.jsp = anon
-				/login.jsp = authc
-				/logout = logout
+				/login/load = anon
+				/user/findPermission = anon
 				/css/** = anon
 				/images/** = anon
 				/js/** = anon
+				/jquery-easyui-1.4.4/** = anon
 			</value>
 		</property>
 	</bean>

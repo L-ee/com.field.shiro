@@ -2,36 +2,33 @@ package com.linan.shiro.action;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-
 import javax.servlet.http.HttpServletResponse;
-
 import org.apache.struts2.ServletActionContext;
-
 import com.alibaba.fastjson.JSON;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class BaceAction extends ActionSupport {
 	
 	/*
-	 * ÐòÁÐºÅ
+	 * ï¿½ï¿½ï¿½Ðºï¿½
 	 */
 	private static final long serialVersionUID = -3016135347295345285L;
 
 	/*
-	 * ½«¶ÔÏóÊý¾Ý¸ñÊ½»¯³ÉJSONÊý¾Ý
-	 * 
-	 * @param Object obj(ÐèÒª¸ñÊ½µÄÊý¾Ý)
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¸ï¿½Ê½ï¿½ï¿½ï¿½ï¿½JSONï¿½ï¿½ï¿½ï¿½
+	 *
+	 * @param Object obj(ï¿½ï¿½Òªï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
 	 * @Authod Lee
 	 * 2016-01-30
 	 */
 	public void OutputJson(Object obj){
 		@SuppressWarnings("unused")
 		PrintWriter writer = null;
-		
+
 		HttpServletResponse response = ServletActionContext.getResponse();
-		// ÉèÖÃÊý¾ÝÀàÐÍ
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		response.setContentType("application/json");
-		// ÉèÖÃ±àÂë¸ñÊ½
+		// ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½ï¿½Ê½
 		response.setCharacterEncoding("UTF-8");
 		try {
 			writer = response.getWriter();
